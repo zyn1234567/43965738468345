@@ -51,7 +51,7 @@ if table.find(HwidWhitelist, HWID) then
     print("Found Hwid In List")
     local Read = readfile("vape/WhiteList.txt")
     if table.find(HwidWhitelist, Read) then
-        game:GetService("Players").LocalPlayer:Kick("This Will Work Soon")
+        game:GetService("Players").LocalPlayer:Kick("This Will Work Soon ")
     else
         local Responce = syn.request(
             {
