@@ -3217,11 +3217,12 @@ runcode(function()
 			if callback then
 				repeat task.wait() until game:GetService("ReplicatedStorage").Inventories[game:GetService("Players").LocalPlayer.Name]
 				if game:GetService("ReplicatedStorage").Inventories[game:GetService("Players").LocalPlayer.Name]:FindFirstChild("hang_glider") then
-					game:GetService("ReplicatedStorage").rbxts_include.node_modules["@rbxts"].net.out._NetManaged.HangGliderUse:FireServer({})
 					ParticalDisabler["ToggleButton"](false)
 					for HangGliderDisabler = 1, math.huge do
 						task.wait()
+						game:GetService("ReplicatedStorage").rbxts_include.node_modules["@rbxts"].net.out._NetManaged.HangGliderUse:FireServer({})
 						game:GetService("ReplicatedStorage").rbxts_include.node_modules["@rbxts"].net.out._NetManaged.nhpbHEaBAC:FireServer()
+						game:GetService("ReplicatedStorage").rbxts_include.node_modules["@rbxts"].net.out._NetManaged.bmuhonrRlkuwan:FireServer()
 					end
 				else
 					createwarning("Partical Disabler", "Failled To Find Hang Glider", 2)
@@ -3250,6 +3251,7 @@ for i, v in pairs(game:GetService("Players"):GetChildren()) do
 		end
 	end
 end
+
 
 			
 
