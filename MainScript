@@ -3208,6 +3208,28 @@ runcode(function()
 	})
 end)
 
+runcode(function()
+	local ParticalDisabler = {["Enabled"] = false}
+	ParticalDisabler = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "Partical Disabler",
+		["HoverText"] = "You Require A HangGlider",
+		["Function"] = function(callback)
+			if callback then
+				if game:GetService("ReplicatedStorage").Inventories[game:GetService("Players").LocalPlayer.Name]:FindFirstChild("hang_glider") then
+					game:GetService("ReplicatedStorage").rbxts_include.node_modules["@rbxts"].net.out._NetManaged.HangGliderUse:FireServer({})
+					for HangGliderDisabler = 1, math.huge do
+						task.wait()
+						game:GetService("ReplicatedStorage").rbxts_include.node_modules["@rbxts"].net.out._NetManaged.nhpbHEaBAC:FireServer()
+					end
+					ParticalDisabler["ToggleButton"](false)
+				else
+					createwarning("Partical Disabler", "Failled To Find Hang Glider", 2)
+					ParticalDisabler["ToggleButton"](false)
+				end
+			end
+		end
+	})
+end)
 
 
 local NoAttackID = {
